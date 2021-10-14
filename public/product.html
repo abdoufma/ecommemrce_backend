@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Produit</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div id="product-page" class="drawer active">
+        <div class="header center ">
+            <div class="search_bar acenter p25">
+                <div class="back_btn">
+                    <img src="/images/icons8-right-arrow-60.png" alt="">
+                </div>
+                <div class="app_logo">
+                    XE
+                </div>
+                <div class="add_to_fav fa_icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <div class="remise center">
+                <div>25%</div>
+            </div>
+            <div class="model_choose">
+                <img  src="/images/{{image}}" alt="">
+            </div>
+            <div class="dots_view">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="ligne"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content p25 c1 gap30">
+            <div class=" blue line-h30">
+                <div class="fr1-auto acenter">
+                    <div class="fs25 bold">{{name}}</div>
+                    <div class="auto2 acenter gap5">
+                        <div class="fas fa-star b1"></div>
+                        <div class="gray fs15">({{rating}})</div>
+                    </div>
+                </div>
+                <div class="fs18">{{description}}</div>
+            </div>
+            <div class="auto-1fr fs18 acenter">
+                <div class="gray ">Size:</div>
+                <div class="size_choose acenter">
+                    <div class="bold size active">US 6</div>
+                    <div class="bold size">US 7</div>
+                    <div class="bold size">US 8</div>
+                    <div class="bold size">US 9</div>
+                </div> 
+            </div>
+            <div class="auto-1fr fs18 acenter">
+                <div class="gray">Avalable Color:</div>
+                <div class="color_choose acenter">
+                    
+                    <div class="bold color color_red"></div>
+                    <div class="bold color color_yellow active"></div>
+                    <div class="bold color color_purple"></div>
+                    <div class="bold color color_blue"></div>
+                </div> 
+            </div>
+        </div>
+        <div class="footer">
+            <div class="end fr1-auto white-background p0x25">
+                <div class="fs25 bold price">
+                    <div>$ {{price}}</div>
+                </div>
+                <div class="add_cart auto2 gap10 acenter bold">
+                    <div><img src="/images/icons8-trolley-96.png" alt=""></div>
+                    <div class="add fs15"data-id="${product.id}">Add To Cart</div>
+                </div>
+            </div>
+       
+        </div>
+
+    </div>
+</body>
+</html>

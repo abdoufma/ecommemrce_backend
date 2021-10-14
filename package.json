@@ -1,0 +1,28 @@
+{
+  "name": "ecommemrce_backend",
+  "version": "1.0.0",
+  "description": "Le backend du site ecommerce2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --ignore public/**/*.js"
+  },
+  "keywords": [
+    "Ecommerce",
+    "node"
+  ],
+  "author": "Amine",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "moment": "^2.29.1",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

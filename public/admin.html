@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="film"></div>
+
+    <div id="admin_home" class="auto-1fr fs15">
+        <div id="nav_bar_admin" class="center c1 p20x0  fs12">
+            <div class="marque fs15 blue_name">
+                Sarl SPV
+            </div>
+            <div data-id="users" class="nav_butt active ">
+                
+                <i class="fas fa-users"></i>
+                <div>Utilisateur</div>
+                
+            </div>
+            <div data-id="orders" class="nav_butt acenter">
+                <i class="fas fa-shopping-cart"></i>
+                <div>Commandes</div>
+           
+            </div>
+            <div data-id="products" class="nav_butt acenter">
+                <i class="fas fa-box"></i>
+                <div>Produits</div>
+            </div>
+            <div data-id="dashboard" class="nav_butt">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>Dashboard</div>
+            </div>
+            <div class="nav_butt">
+                <i class="fas fa-bell"></i>
+                <div>Notifications</div>
+            </div>
+            <div class="nav_butt">
+                <i class="fas fa-cog"></i>
+                <div>Réglages</div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div id="bar_admin" class=" acenter c3 p0x15">
+                <div class="page_name bold">
+                    UTILISATEURS
+                </div>
+                <div class="search_bar acenter  c2 gap10 ">
+                    <i class="fas fa-search fs20 gray"></i>
+                    <input type="search" name="" id="search">
+                </div>
+                <div class="right acenter flex-r gap20">
+                    <div class="admin_btn flex gap20">
+
+                        <i class="fas fa-bell right fs20 gray"></i>
+                        <i class="fas fa-cog fs20 gray"></i>
+                        <div>
+                            SPV admin
+                        </div>
+                    </div>
+                    <img src="./images/face3.png" alt="">
+                    
+                </div>
+            </div>
+            
+            <div id="main-content"> 
+             
+                <div id="users-page" class="page table-container mc1" data-name="users" style="display: block;" >
+                    <div class="users-table-header  p15 acenter ">
+                        <div class="fs20 ">
+                            Liste Des Utilisateurs
+                        </div>
+                        <div class="trie">
+                            <div class="center p10x0">Trier par :</div>
+                            <select class="select_trie" name="" data-id="checked">
+                                <option value="date">Date</option>
+                                <option value="name">Name</option>
+                                <option value="address">Address</option>
+                                <option value="phone_number">N°de tel</option>
+                                
+                            </select>
+                            
+                        </div>
+                        <div class="right add_item ">
+                            <button class="btn">Nouveau élement</button>
+                        </div>
+                        
+                    </div>
+                    <div class="table-element title">
+                        <div>Identité</div>
+                        <div>N° de téléphone</div>
+                        <div>Email</div>
+                        <div>Adresse</div>
+                        <div>Date d'inscription</div>
+                    </div>
+
+                    <div id="users-list" class="table-content ">
+                            <!-- utilisateur -->
+                    </div>
+                </div>  
+
+
+                <div id="products-page" class="page table-container" data-name="products">
+                    <div class="users-table-header  p15 acenter mc1">
+                        <div class="fs20 ">
+                            Liste Des Produits
+                        </div>
+                        <div class="trie">
+                            <div class="center p10x0">Trier par :</div>
+                            <select class="select_trie" name="" data-id="checked">
+                                <option value="date">Date</option>
+                                <option value="name">Name</option>
+                                
+                                <option value="price">Prix</option>
+                                <option value="rating">Note</option>
+                                <option value="category">Categorie</option>
+                            </select>
+                            
+                        </div>
+                        <div class="right add_item ">
+                            <button class="btn">Nouveau élement</button>
+                        </div>
+                        
+                    </div>
+                    <div class="table-element title">
+                        <div>Image</div>
+                        <div>Nom</div>
+                        <div>Prix</div>
+                        <div>Note</div>
+                        <div>Catégorie</div>
+                        <div>Date</div>
+                    </div>
+
+                    <div id="products-list" class="table-content">
+                            <!-- products list -->
+                    </div>
+                </div>  
+                
+                <div id="orders-page" class="page table-container" data-name="orders">
+                    <div class="users-table-header  p15 acenter mc1">
+                        <div class="fs20 ">
+                            Liste Des Commandes
+                        </div>
+                        <div class="trie">
+                            <div class="center p10x0">Trier par :</div>
+                            <select class="select_trie" name="" data-id="checked">
+                                
+                                <option  value="date">Date</option>
+                               
+                              
+                                <option  value="price">Prix</option>
+                                <option value="status">Status</option>
+                             
+                            </select>
+                            
+                        </div>
+                        <div class="right add_item ">
+                            <button class="btn">Nouveau élement</button>
+                        </div>
+                        
+                    </div>
+                    <div class="table-element title">
+                        <div>Products</div>
+                        <div>Useur</div>
+                        <div>Prix</div>
+                        <div>Status</div>
+                        <div>Date</div>
+                    </div>
+
+                    <div id="orders-list" class="table-content">
+                            <!-- products list -->
+                    </div>
+                </div> 
+                
+                <div id="dashboard-page" class="page " data-name="dashboard">
+                    <div id="dashboard_content">
+                        <div id="statistic_but_bar" class="mc1">
+                            <div class="statistic_but_gp1 c2 gap25 mc2">
+                                <div class="statistic_but btn-orange  ">
+                                    <div class="donnes_globale c1 ">
+                                        <div>Nombre de commande</div>
+                                        <div id="nomber_command">10 Commande</div>
+                                    </div>
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="statistic_but btn-green mc2">
+                                    <div class="donnes_globale c1">
+                                        <div>Nombre d'Utilisateurs</div>
+                                        <div id="nomber_users">$ 20.000</div>
+                                    </div>
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                            </div>
+                            <div class="statistic_but btn-blue">
+                                <div class="donnes_globale c1 ">
+                                    <div>Nombre de produits</div>
+                                    <div id="nomber_products">$ 20.000</div>
+                                </div>
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        
+                        </div>
+                        <div class="c2 gap25 center mc1">
+                            <div id="orders-graph" class="graph"><p class="gray">Données insuffisant pour générer un graph.</p></div>
+                            <div id="users-graph" class="graph"> <p class="gray">Données insuffisant pour générer un graph.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /////////////////////////////////////////////////////////////
+            //////////////////     Dashboard     ////////////////////////
+            //////////////////////////////////////////////////////////// -->
+            
+            
+        </div>
+
+        <div id="page_add_user" class="">
+           
+        </div>
+        
+        <div class="popup user-popup">
+            <i class="close-popup fas fa-times"></i>
+
+            <div class="popup-option modif">
+                <div class="icon-wrapper"><i class="fas fa-edit "></i></div>
+                <div>modifier</div>
+            </div>
+
+            <div class="popup-option deleted">
+                <div class="icon-wrapper"><i class="fas fa-trash"></i></div>
+                <div>supprimer</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DRAWERS -->
+
+    <div id="user_drawer" class="drawer desktop center">
+        <div class="header">
+            <div><i class="close-drawer fas fa-chevron-left"></i></div>
+            
+            <div class="title">Ajouter un utilisateur</div>
+            <div></div>
+        </div>
+
+        <div class="drawer_content c1 gap25">
+           <div class="form_case">
+               <div>Name</div>
+               <input type="text"  data-id="name">
+           </div>
+
+           <div class="form_case">
+               <div>Phone number</div>
+               <input type="number" data-id="phone_number">
+            </div>
+
+            <div class="form_case">
+                <div>Address</div>
+                <input type="text" data-id="address">
+            </div>
+            
+            <div class="form_case ">
+                <div>Email</div>
+                <input type="email" data-id="email">
+            </div>
+
+            <div class="form_case">
+                <div>Password</div>
+                <input type="password" data-id="password">
+            </div>
+            
+        </div>
+
+        <div class="drawer_footer c2 gap20">
+            <button id="annul_drawer" class="btn_annule">ANNULER</button>
+            <button id="save_item" class="btn">ENREGISTRER</button>
+        </div>
+    </div>
+    
+    <div id="product_drawer" class="drawer desktop center">
+        <div class="header">
+            <div>
+                <i class="close-drawer fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="title"> Ajouter un produit </div>
+            
+        </div>
+
+        <div class="drawer_content c1 gap25">
+
+            <div class="form_case">
+                <div>Name</div>
+                <input type="text"  data-id="name">
+            </div>
+
+            <div class="form_case">
+                <div>Image</div>
+                <input type="file" id="avatar" data-id="image" class="hidden">
+                <img id="product_img"  src="./images/ch7.png" alt="">
+            </div>
+
+            <div class="form_case"> 
+                <div>Prix</div>
+                <input type="text" data-id="price">
+            </div>
+            
+            <div class="form_case ">
+                <div>Note</div>
+                <input type="text" data-id="rating">
+            </div>
+
+            <div class="form_case">
+                <div>Category</div>
+                <input type="text" data-id="category">
+            </div>
+
+            <div class="form_case">
+                <div>Description</div>
+                <textarea data-id="description" cols="30" rows="5"></textarea>
+            </div>
+            
+        </div>
+
+        <div class="drawer_footer c2 gap20">
+            <button id="annul_drawer" class="btn_annule">ANNULER</button>
+            <button id="save_item" class="btn">ENREGISTRER</button>
+        </div>
+    </div>
+
+    <div class=" orders-popup">
+        <i class="close-popup fas fa-times"></i>
+
+        <div class="popup-option modif">
+            <div class="icon-wrapper"><i class="fas fa-edit "></i></div>
+            <div class="modif_status">modifier status</div>
+        </div>
+
+        <div class="popup-option deleted">
+            <div class="icon-wrapper"><i class="fas fa-trash"></i></div>
+            <div>supprimer</div>
+        </div>
+    </div>
+
+    <div id="status-popup-drawer" class="drawer desktop status-popup center  ">
+       
+        <div class="header">
+            <div><i class="close-drawer fas fa-chevron-left"></i></div>
+            <div class="title center">Ajouter un utilisateur</div>
+            
+        </div>
+        <div id="content_status" class="drawer_content c1 gap25 ">
+            <div  class="btn-status" data-id="not-confirm ">
+                <button class="btn-gray">Not confirm</button>
+            
+            </div>
+            <div class="btn-status " data-id="confirm">
+                <button class="btn-blue">Confirm</button>
+            
+            </div>
+            <div class="btn-status" data-id="shipping-progress">
+                <button class="btn-orange">Shipping-progress</button>
+            
+            </div>
+            <div class="btn-status" data-id="delivered">
+                <button class="btn-green">Delivered</button>
+            </div>
+        </div>
+        <div class="drawer_footer c2 gap20">
+            <button id="annul_drawer" class="btn_annule">ANNULER</button>
+            <button id="save_statu" class="btn">ENREGISTRER</button>
+        </div>
+       
+    </div>
+
+</div>
+
+</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/general_functions.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    
+    <script src="js/admin.js"></script>
+</html>

@@ -270,7 +270,7 @@ app.get("/get_stat_orders", async(req, res) => {
     }
     // {"03-10" : [{},{}], "04-oct" : [{}], "07-10" : [{}]}
 
-    //console.log(orders_by_date);
+    console.log(orders_by_date);
 
     const firstDay = start_date.format("DD MMM");
 
